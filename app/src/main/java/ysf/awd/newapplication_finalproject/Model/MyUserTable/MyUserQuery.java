@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.data.MyUserTable;
+package ysf.awd.newapplication_finalproject.Model.MyUserTable;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,8 +7,6 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
-
-import ysf.awd.newapplication_finalproject.data.MyUserTable.MyUser;
 
 /**
  * واجهة تحوي عمليات\دوال\استعلامات على قاعدة البيانات

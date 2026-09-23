@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.data.MySubjectTable;
+package ysf.awd.newapplication_finalproject.Model.MySubjectTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

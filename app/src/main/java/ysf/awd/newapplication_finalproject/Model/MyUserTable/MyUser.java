@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.data.MyUserTable;//Entity = Table =جدول
+package ysf.awd.newapplication_finalproject.Model.MyUserTable;//Entity = Table =جدول
 //عندما نريد ان نتعامل مع هذه الفئة كجدول معطيات
 
 import androidx.room.ColumnInfo;

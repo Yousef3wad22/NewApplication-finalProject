@@ -1,13 +1,16 @@
-package ysf.awd.newapplication_finalproject.data;
+package ysf.awd.newapplication_finalproject.Model;
 
 import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import ysf.awd.newapplication_finalproject.data.MySubjectTable.MySubjectQuery;
-import ysf.awd.newapplication_finalproject.data.MyTaskTable.MyTaskQuery;
-import ysf.awd.newapplication_finalproject.data.MyUserTable.MyUserQuery;
+import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubject;
+import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubjectQuery;
+import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
+import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTaskQuery;
+import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUser;
+import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUserQuery;
 
 /**
  * الفئة المسؤولة عن بناء قاعدة البيانات بكل جداولها
@@ -48,7 +51,7 @@ public abstract class AppDataBase extends RoomDatabase {
         if (db == null) {
             db = Room.databaseBuilder(context,
                             AppDataBase.class,
-                            "samihDataBase" // اسم قاعدة البيانات
+                            "yousefDataBase" // اسم قاعدة البيانات
                     )
                     .fallbackToDestructiveMigration()
                     .allowMainThreadQueries()

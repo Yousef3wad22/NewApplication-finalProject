@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.data.MyTaskTable;
+package ysf.awd.newapplication_finalproject.Model.MyTaskTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
