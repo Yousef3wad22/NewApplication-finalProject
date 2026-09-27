@@ -11,4 +11,6 @@ public class MySubject {
 
     public String title;
 
+    public void setTitle(String math) {
+    }
 }
