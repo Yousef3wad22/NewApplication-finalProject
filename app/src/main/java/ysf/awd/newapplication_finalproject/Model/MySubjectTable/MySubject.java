@@ -11,6 +11,7 @@ public class MySubject {
 
     public String title;
 
-    public void setTitle(String math) {
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
