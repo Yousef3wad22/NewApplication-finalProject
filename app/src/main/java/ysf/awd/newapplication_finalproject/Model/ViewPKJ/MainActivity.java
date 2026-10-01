@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject;
+package ysf.awd.newapplication_finalproject.Model.ViewPKJ;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 import ysf.awd.newapplication_finalproject.Model.AppDataBase;
 import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubject;
 import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubjectQuery;
+import ysf.awd.newapplication_finalproject.R;
 
 public class MainActivity extends AppCompatActivity {
 
