@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.Model.ViewPKJ;
+package ysf.awd.newapplication_finalproject.Model.ViewPkg;
 
 import android.os.Bundle;
 
