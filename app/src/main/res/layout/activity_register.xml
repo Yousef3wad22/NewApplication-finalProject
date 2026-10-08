@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:text="Task Register"
-        android:textSize="20dp" />
+        android:text="User Registration"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextText2"
@@ -58,6 +59,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Save Task" />
+        android:text="Register" />
 
 </LinearLayout>

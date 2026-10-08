@@ -16,6 +16,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:insetBottom="15dp"
+        android:onClick="onClick"
         android:text="Add New Task"
         android:textSize="16sp" />
 
