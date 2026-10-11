@@ -33,6 +33,7 @@ public class MyTask {
 
     /** رقم المستعمل الذي اضاف المهمة */
     public long userId;
+    public String description;
 
     public MyTask() {
     }

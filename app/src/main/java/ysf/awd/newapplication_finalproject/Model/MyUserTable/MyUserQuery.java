@@ -1,5 +1,6 @@
 package ysf.awd.newapplication_finalproject.Model.MyUserTable;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -7,6 +8,8 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
+
+import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
 
 /**
  * واجهة تحوي عمليات\دوال\استعلامات على قاعدة البيانات
@@ -39,4 +42,6 @@ public interface MyUserQuery
     @Update
 //تعديل مستعمل او قائمة مستعملين
     void update(MyUser...values);
+
+
 }

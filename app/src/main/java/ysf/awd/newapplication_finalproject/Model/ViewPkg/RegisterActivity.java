@@ -1,6 +1,9 @@
 package ysf.awd.newapplication_finalproject.Model.ViewPkg;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +14,12 @@ import androidx.core.view.WindowInsetsCompat;
 import ysf.awd.newapplication_finalproject.R;
 
 public class RegisterActivity extends AppCompatActivity {
+    private TextView textView;
+    private EditText editTextTextMultiLine;
+    private EditText editTextText;
+    private EditText editTextText2;
+    private EditText editTextText11;
+    private Button btnSaveTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
     }
 }

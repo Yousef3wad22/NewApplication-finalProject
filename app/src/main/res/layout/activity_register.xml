@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Model.ViewPkg.AddTaskActivity">
+    tools:context=".Model.ViewPkg.RegisterActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -19,27 +19,9 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:hint="Full Name"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="text" />
-
-    <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="62dp"
         android:layout_margin="5dp"
         android:ems="10"
         android:gravity="start|top"
@@ -47,9 +29,27 @@
         android:inputType="textMultiLine" />
 
     <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text" />
+
+    <EditText
         android:id="@+id/editTextText11"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="67dp"
         android:ems="10"
         android:hint="Phone Number"
         android:inputType="text" />
@@ -60,5 +60,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="Register" />
+
 
 </LinearLayout>
