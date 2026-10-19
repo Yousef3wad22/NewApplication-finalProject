@@ -11,6 +11,9 @@ import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
 import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTaskQuery;
 
 public class TaskRepository {
+    public TaskRepository(Application application) {
+    }
+
     /**
             * مستودع المهام (MyTask) يعمل كطبقة وسيطة ومنظمة للوصول إلى بيانات المهام (TaskRepository).
             * يقوم بفصل قاعدة بيانات
@@ -18,7 +21,8 @@ public class TaskRepository {
  * عن بقية أجزاء التطبيق (ViewModels).
             */
     public class taskRepository {
-        private final MyTaskQuery taskQuery;//واجهة الاستعلامات
+        private final MyTaskQuery taskQuery;//و
+        // اجهة الاستعلامات
         private final LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهلام المستخرجة
 
         /**
@@ -37,7 +41,8 @@ public class TaskRepository {
          *
          * @return قائمة بجميع المهام المحدثة تلقائياً.
          */
-        public LiveData<List<MyTask>> getAllTasks() {
+        public LiveData<List<MyTask>> getAllTasks()
+        {
             return allTasks;
         }
 
