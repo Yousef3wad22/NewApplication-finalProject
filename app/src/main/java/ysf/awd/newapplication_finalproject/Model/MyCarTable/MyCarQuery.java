@@ -1,5 +1,6 @@
 package ysf.awd.newapplication_finalproject.Model.MyCarTable;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -25,7 +26,7 @@ public interface MyCarQuery {
 
     // جلب جميع السيارات
     @Query("SELECT * FROM MyCar")
-    List<MyCar> getAllCars();
+    LiveData<List<MyCarQuery>> getAllCars();
 
     // جلب سيارة بواسطة المعرف (ID)
     @Query("SELECT * FROM MyCar WHERE key_id = :id")

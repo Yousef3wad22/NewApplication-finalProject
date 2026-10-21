@@ -6,6 +6,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCar;
+import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCarQuery;
 import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubject;
 import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubjectQuery;
 import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
@@ -42,6 +43,7 @@ public abstract class AppDataBase extends RoomDatabase {
      * @return
      */
     public abstract MyTaskQuery getMyTaskQuery();
+    public abstract MyCarQuery getMyCarQuery();
 
     /**
      * بناء قاعدة البيانات واعادة كائن يؤشر عليها
@@ -60,4 +62,8 @@ public abstract class AppDataBase extends RoomDatabase {
         }
         return db;
     }
+
+
+
+
 }
