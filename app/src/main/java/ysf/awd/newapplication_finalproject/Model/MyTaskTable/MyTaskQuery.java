@@ -25,7 +25,7 @@ public interface MyTaskQuery {
      * @return
      */
     @Query("SELECT * FROM MyTask WHERE userId=:userid_p ORDER BY time DESC")
-    LiveData<List<MyTask>> getAllTaskOrederBy(long userid_p);
+   LiveData<MyTask> getAllTaskOrederBy(long userid_p);
 
     /**
      * ارجاع المهمات حسب المستعمل واذا انتهت ام لا ومرتبة تنازليا حسب الاهمية

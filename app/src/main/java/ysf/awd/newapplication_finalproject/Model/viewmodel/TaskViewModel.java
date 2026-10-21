@@ -3,7 +3,6 @@ package ysf.awd.newapplication_finalproject.Model.viewmodel;
 import android.app.Application;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
@@ -47,7 +46,7 @@ public class TaskViewModel {
          * @param userId معرف المستخدم المراد جلب مهامه.
          * @return قائمة المهام الخاصة بالمستخدم.
          */
-        public LiveData<List<MyTask>> getTasksByUserId(long userId) {
+        public List<MyTask> getTasksByUserId(long userId) {
             return repository.getTasksByUserId(userId);
         }
 
@@ -153,4 +152,4 @@ public class TaskViewModel {
 
 
 
-}
+

@@ -27,6 +27,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:insetBottom="15dp"
+        android:onClick="onClickR"
         android:text="Regiter User"
         android:textSize="16sp" />
 

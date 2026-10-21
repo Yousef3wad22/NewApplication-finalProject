@@ -9,18 +9,13 @@ import java.util.List;
 import ysf.awd.newapplication_finalproject.Model.AppDataBase;
 import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
 import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTaskQuery;
-
-public class TaskRepository {
-    public TaskRepository(Application application) {
-    }
-
-    /**
-            * مستودع المهام (MyTask) يعمل كطبقة وسيطة ومنظمة للوصول إلى بيانات المهام (TaskRepository).
-            * يقوم بفصل قاعدة بيانات
+/**
+ * مستودع المهام (MyTask) يعمل كطبقة وسيطة ومنظمة للوصول إلى بيانات المهام (TaskRepository).
+ * يقوم بفصل قاعدة بيانات
 * Room  و {@link MyTaskQuery}
  * عن بقية أجزاء التطبيق (ViewModels).
             */
-    public class taskRepository {
+    public class TaskRepository {
         private final MyTaskQuery taskQuery;//و
         // اجهة الاستعلامات
         private final LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهلام المستخرجة
@@ -31,7 +26,7 @@ public class TaskRepository {
          *
          * @param application سياق التطبيق (Application Context) المستخدم لإنشاء قاعدة البيانات.
          */
-        public taskRepository(Application application) {
+        public TaskRepository(Application application) {
             AppDataBase db = AppDataBase.getDB(application);
             taskQuery = db.getMyTaskQuery();
             allTasks = taskQuery.getAllTasks();
@@ -62,7 +57,7 @@ public class TaskRepository {
          * @param taskId معرف المهمة الفريد.
          * @return كائن المهمة المطلوب.
          */
-        public LiveData<List<MyTask>> getTaskById(long taskId) {
+        public LiveData<MyTask> getTaskById(long taskId) {
             return taskQuery.getAllTaskOrederBy(taskId);
         }
 
@@ -147,7 +142,7 @@ public class TaskRepository {
             taskQuery.deleteTaskById(taskId);
         }
     }
-}
+
 
 
 
