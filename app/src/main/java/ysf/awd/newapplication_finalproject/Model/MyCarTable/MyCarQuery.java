@@ -26,7 +26,7 @@ public interface MyCarQuery {
 
     // جلب جميع السيارات
     @Query("SELECT * FROM MyCar")
-    LiveData<List<MyCarQuery>> getAllCars();
+    LiveData<List<MyCar>> getAllCars();
 
     // جلب سيارة بواسطة المعرف (ID)
     @Query("SELECT * FROM MyCar WHERE key_id = :id")

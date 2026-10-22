@@ -16,7 +16,7 @@ import java.util.List;
 public interface MyUserQuery
 {   //استخراج جميع المستعملين
     @Query("SELECT * FROM MyUser")
-    LiveData<List<MyUserQuery>> getAll();
+    LiveData<List<MyUser>> getAll();
     // استخراج مستعمل حسب رقم المميز لهid
     @Query("SELECT * FROM MyUser WHERE keyid IN (:userIds)")
     List<MyUser> loadAllByIds(int[] userIds);

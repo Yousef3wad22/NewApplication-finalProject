@@ -82,11 +82,12 @@ public interface MyTaskQuery {
     LiveData<List<MyTask>> getTasksByimportance(int importance);
     @Query("SELECT * FROM MyTask WHERE userId=:userId AND shortTitle=:title " +
             "ORDER BY importance DESC")
-
     LiveData<List<MyTask>> getTasksByUserIdAndTitle(long userId, String title);
-    @Update
+
+    @Query("UPDATE MyTask SET shortTitle = :shortTitle, description = :description, importance = :importance WHERE keyId = :keyId")
     void updateTask(long keyId, String shortTitle, String description, int importance);
-    @Delete
+
+    @Query("DELETE FROM MyTask WHERE keyId = :taskId")
     void deleteTaskById(long taskId);
 
 }

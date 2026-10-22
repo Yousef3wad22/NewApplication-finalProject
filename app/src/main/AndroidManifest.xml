@@ -30,6 +30,10 @@
             android:exported="false"
             android:theme="@style/Theme.NewApplicationfinalProject"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Model.ViewPkg.signIn"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

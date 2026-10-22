@@ -6,35 +6,31 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import ysf.awd.newapplication_finalproject.Model.AppDataBase;
 import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCar;
-import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCarQuery;
-import ysf.awd.newapplication_finalproject.Model.repositories.TaskRepository;
+import ysf.awd.newapplication_finalproject.Model.repositories.CarRepository;
 
 public class CarViewModel {
-    private final Repository repository;
+    private CarRepository repository;
 
-    private final LiveData<List<MyCarQuery>> allCars;
+    private LiveData<List<MyCar>> allCars;
 
     public CarViewModel(Application application) {
-        AppDataBase db = AppDataBase.getDB(application);
-        carQuery = db.getMyCarQuery();
-        allCars = carQuery.getAllCars();
+        repository = new CarRepository(application);
+        allCars = repository.getAllCars();
     }
-    void insertCar(MyCar car){
-        carQuery.insertCar(car);
-    }
-    void updateCar(MyCar car){
-        carQuery.updateCar(car);
-    }
-    void deleteCar(MyCar car){
-        carQuery.deleteCar(car);
-    }
-    public LiveData<List<MyCarQuery>> getAllCars(){
+    public LiveData<List<MyCar>> getAllCars() {
         return allCars;
     }
-    MyCar getCarById(long id){
-        return r.getCarById(id);
+    void insertCar(MyCar car){
+        repository.insertCar(car);
     }
-
+    void updateCar(MyCar car){
+        repository.updateCar(car);
+    }
+    void deleteCar(MyCar car){
+        repository.deleteCar(car);
+    }
+    public MyCar getCarById(long id){
+        return repository.getCarById(id);
+    }
 }

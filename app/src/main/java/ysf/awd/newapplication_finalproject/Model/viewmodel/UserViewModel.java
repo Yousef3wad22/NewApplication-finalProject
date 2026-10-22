@@ -8,12 +8,11 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUser;
-import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUserQuery;
 import ysf.awd.newapplication_finalproject.Model.repositories.UserRepository;
 
 public class UserViewModel {
     private final UserRepository repository;
-    private final LiveData<List<MyUserQuery>> allUsers;
+    private final LiveData<List<MyUser>> allUsers;
 
     public UserViewModel(@NonNull Application application) {
         super();
@@ -24,7 +23,7 @@ public class UserViewModel {
      * استخراج جميع المستعملين
      * @return جدول يحمل جميع المستعملين
      */
-    public LiveData<List<MyUserQuery>> getAllUsers(){
+    public LiveData<List<MyUser>> getAllUsers(){
         return allUsers;
     }
 

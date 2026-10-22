@@ -12,7 +12,7 @@ import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUserQuery;
 
 public class UserRepository {
     private final MyUserQuery userQuery;
-    private LiveData<List<MyUserQuery>> allUsers;
+    private LiveData<List<MyUser>> allUsers;
 
     public UserRepository(Application application) {
         AppDataBase db = AppDataBase.getDB(application);
@@ -24,7 +24,7 @@ public class UserRepository {
      * استخراج جميع المستعملين
      * @return جدول يحمل جميع المستعملين
      */
-    public LiveData<List<MyUserQuery>> getAllUsers(){
+    public LiveData<List<MyUser>> getAllUsers(){
         return allUsers;
     }
 

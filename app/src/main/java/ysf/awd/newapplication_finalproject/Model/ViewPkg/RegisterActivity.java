@@ -31,6 +31,13 @@ public class RegisterActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        textView= findViewById(R.id.textView);
+        editTextTextMultiLine= findViewById(R.id.editTextTextMultiLine);
+        editTextText= findViewById(R.id.editTextText);
+        editTextText2= findViewById(R.id.editTextText2);
+        editTextText11= findViewById(R.id.editTextText11);
+        btnSaveTask= findViewById(R.id.btnSaveTask);
+
 
     }
 }
