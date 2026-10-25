@@ -6,6 +6,13 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="user_registration">User Registration</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email Address</string>
+    <string name="phone">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
