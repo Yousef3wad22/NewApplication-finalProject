@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 import ysf.awd.newapplication_finalproject.Model.AppDataBase;
-import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCar;
-import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCarQuery;
+import ysf.awd.newapplication_finalproject.Model.Model.MyCarTable.MyCar;
+import ysf.awd.newapplication_finalproject.Model.Model.MyCarTable.MyCarQuery;
 
 public class CarRepository {
     private final MyCarQuery carQuery;

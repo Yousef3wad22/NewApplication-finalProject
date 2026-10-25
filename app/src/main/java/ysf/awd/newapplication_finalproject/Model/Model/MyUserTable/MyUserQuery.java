@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.Model.MyUserTable;
+package ysf.awd.newapplication_finalproject.Model.Model.MyUserTable;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

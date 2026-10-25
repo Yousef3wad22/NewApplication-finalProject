@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.Model.MySubjectTable;
+package ysf.awd.newapplication_finalproject.Model.Model.MySubjectTable;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

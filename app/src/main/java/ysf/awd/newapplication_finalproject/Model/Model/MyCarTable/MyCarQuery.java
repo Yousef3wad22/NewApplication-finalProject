@@ -1,4 +1,4 @@
-package ysf.awd.newapplication_finalproject.Model.MyCarTable;
+package ysf.awd.newapplication_finalproject.Model.Model.MyCarTable;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

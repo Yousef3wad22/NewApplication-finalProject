@@ -5,14 +5,14 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCar;
-import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCarQuery;
-import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubject;
-import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubjectQuery;
-import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
-import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTaskQuery;
-import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUser;
-import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUserQuery;
+import ysf.awd.newapplication_finalproject.Model.Model.MyCarTable.MyCar;
+import ysf.awd.newapplication_finalproject.Model.Model.MyCarTable.MyCarQuery;
+import ysf.awd.newapplication_finalproject.Model.Model.MySubjectTable.MySubject;
+import ysf.awd.newapplication_finalproject.Model.Model.MySubjectTable.MySubjectQuery;
+import ysf.awd.newapplication_finalproject.Model.Model.MyTaskTable.MyTask;
+import ysf.awd.newapplication_finalproject.Model.Model.MyTaskTable.MyTaskQuery;
+import ysf.awd.newapplication_finalproject.Model.Model.MyUserTable.MyUser;
+import ysf.awd.newapplication_finalproject.Model.Model.MyUserTable.MyUserQuery;
 
 /**
  * الفئة المسؤولة عن بناء قاعدة البيانات بكل جداولها

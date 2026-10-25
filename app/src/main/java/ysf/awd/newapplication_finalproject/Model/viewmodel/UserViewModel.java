@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import ysf.awd.newapplication_finalproject.Model.MyUserTable.MyUser;
+import ysf.awd.newapplication_finalproject.Model.Model.MyUserTable.MyUser;
 import ysf.awd.newapplication_finalproject.Model.repositories.UserRepository;
 
 public class UserViewModel {

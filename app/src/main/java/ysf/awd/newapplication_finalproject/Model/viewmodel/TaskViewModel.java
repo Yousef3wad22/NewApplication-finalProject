@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
+import ysf.awd.newapplication_finalproject.Model.Model.MyTaskTable.MyTask;
 import ysf.awd.newapplication_finalproject.Model.repositories.TaskRepository;
 
 public class TaskViewModel {

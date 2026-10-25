@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 import ysf.awd.newapplication_finalproject.Model.AppDataBase;
-import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTask;
-import ysf.awd.newapplication_finalproject.Model.MyTaskTable.MyTaskQuery;
+import ysf.awd.newapplication_finalproject.Model.Model.MyTaskTable.MyTask;
+import ysf.awd.newapplication_finalproject.Model.Model.MyTaskTable.MyTaskQuery;
 /**
  * مستودع المهام (MyTask) يعمل كطبقة وسيطة ومنظمة للوصول إلى بيانات المهام (TaskRepository).
  * يقوم بفصل قاعدة بيانات

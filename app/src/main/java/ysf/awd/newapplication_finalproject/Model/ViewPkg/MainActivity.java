@@ -12,8 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import ysf.awd.newapplication_finalproject.Model.AppDataBase;
-import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubject;
-import ysf.awd.newapplication_finalproject.Model.MySubjectTable.MySubjectQuery;
+import ysf.awd.newapplication_finalproject.Model.Model.MySubjectTable.MySubject;
+import ysf.awd.newapplication_finalproject.Model.Model.MySubjectTable.MySubjectQuery;
 import ysf.awd.newapplication_finalproject.R;
 
 public class MainActivity extends AppCompatActivity {

@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import ysf.awd.newapplication_finalproject.Model.MyCarTable.MyCar;
+import ysf.awd.newapplication_finalproject.Model.Model.MyCarTable.MyCar;
 import ysf.awd.newapplication_finalproject.Model.repositories.CarRepository;
 
 public class CarViewModel {
