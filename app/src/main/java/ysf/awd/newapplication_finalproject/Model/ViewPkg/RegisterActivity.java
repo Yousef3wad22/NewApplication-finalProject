@@ -42,29 +42,31 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(v -> saveUser());
     }
 
-    /**
-     *
-     */
+
+     //تقوم بتجميع النصوص التي أدخلها المستعمل في حقول الشاشة مع حذف المسافات الزائدة من البداية والنهاية باستخدام .trim():
     private void saveUser() {
         String fullName = etFullName.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String phone = etPhone.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
-//,jhhljk
+//,تفحص هل يوجد أي حقل فارغ. إذا كان هناك حقل فارغ، تُظهر رسالة تنبيه للمستعمل (Toast) وتوقف تنفيذ العملية (return):
         if (fullName.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
+//نشئ كائناً جديداً من فئة MyUser وتُدخل فيه البيانات التي قرأتها من الشاشة:
         MyUser myUser = new MyUser();
         myUser.setFullName(fullName);
         myUser.setEmail(email);
         myUser.setPhone(phone);
         myUser.setPassw(password);
-//jjlkj
+
+        //تتصل بقاعدة البيانات وتنفذ استعلام الإدخال لتخزين المستعمل الجديد في الجدول:
         AppDataBase db = AppDataBase.getDB(getApplicationContext());
         db.getMyUserQuery().insert(myUser);
 
+        //تظهر رسالة للمستعمل تؤكد نجاح عملية التسجيل، ثم تُغلق شاشة التسجيل وتعود للشاشة السابقة عبر الدالة finish():
         Toast.makeText(this, "User registered successfully", Toast.LENGTH_SHORT).show();
         finish();
     }
