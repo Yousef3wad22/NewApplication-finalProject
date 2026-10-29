@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".Model.ViewPkg.signIn">
 
     <TextView
         android:id="@+id/signText"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:gravity="center"
-        android:text="sign in"
+        android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textSize="34sp"
         android:textStyle="bold" />
@@ -23,24 +24,37 @@
     <EditText
         android:id="@+id/editUserName"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="emailAddress"
         android:ems="10"
-        android:inputType="text"
-        android:text="User Name" />
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/editPassword"
         android:layout_width="match_parent"
-        android:layout_height="78dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="24dp"
+        android:autofillHints="password"
         android:ems="10"
-        android:inputType="text"
-        android:text="Password" />
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_margin="20dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="Sign In" />
+
+    <Button
+        android:id="@+id/btnGoToRegister"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:text="@string/dont_have_account" />
+
 </LinearLayout>
