@@ -22,83 +22,93 @@ public class UserRepository {
 
     /**
      * استخراج جميع المستعملين
+     *
      * @return جدول يحمل جميع المستعملين
      */
-    public LiveData<List<MyUser>> getAllUsers(){
+    public LiveData<List<MyUser>> getAllUsers() {
         return allUsers;
     }
 
     /**
-     *  استخراج مستعمل حسب رقم المميز لهid
+     * استخراج مستعمل حسب رقم المميز لهid
+     *
      * @param keyid
      * @return تعيد المستعملين حسب الid
      */
-    public List<MyUser> loadAllByIds(int[] keyid){
+    public List<MyUser> loadAllByIds(int[] keyid) {
         return userQuery.loadAllByIds(keyid);
     }
 
     /**
      * هل المستعمل موجود حسب الايميل وكلمة السر
+     *
      * @param myEmail
      * @param myPassw
      * @return تعيد المستعمل حسب الايميل وكلمة المرور
      */
 
-    public List<MyUser> checkEmailPassw(String myEmail, String myPassw){
-        return userQuery.checkEmailPassw(myEmail,myPassw);
+    public List<MyUser> checkEmailPassw(String myEmail, String myPassw) {
+        return userQuery.checkEmailPassw(myEmail, myPassw);
     }
 
     /**
      * فحص هل الايميل موجود من قبل
+     *
      * @param myEmail
      * @return الايميل اذا كان موجود
      */
-    public List<MyUser> checkEmail(String myEmail){
+    public List<MyUser> checkEmail(String myEmail) {
         return userQuery.checkEmail(myEmail);
     }
 
     /**
      * اضافة مستعمل او مجموعة مستعملين
+     *
      * @param users
      */
-    public void  insertAll(MyUser... users){
+    public void insertAll(MyUser... users) {
         userQuery.insertAll(users);
     }
 
     /**
      * حذف
+     *
      * @param users
      */
-    public void delete(MyUser users){
+    public void delete(MyUser users) {
         userQuery.delete(users);
     }
 
     /**
      * //حذف حسب الرقم المميز id
+     *
      * @param id
      */
-    public void delete(int id){
+    public void delete(int id) {
         userQuery.delete(id);
     }
 
     /**
      * اضافة مستعمل واحد
+     *
      * @param users
      */
-    public void insert(MyUser users){
+    public void insert(MyUser users) {
         userQuery.insert(users);
     }
 
     /**
      * تعديل مستعمل او قائمة مستعملين
+     *
      * @param users
      */
-    public void update(MyUser users){
+    public void update(MyUser users) {
         userQuery.update(users);
     }
 
 
-
-
-
+    public MyUser login(String email, String password) {
+        userQuery.login(email,password);
+        return null;
+    }
 }

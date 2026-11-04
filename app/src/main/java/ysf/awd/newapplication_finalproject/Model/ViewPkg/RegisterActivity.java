@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import ysf.awd.newapplication_finalproject.Model.AppDataBase;
 import ysf.awd.newapplication_finalproject.Model.Model.MyUserTable.MyUser;
+import ysf.awd.newapplication_finalproject.Model.viewmodel.UserViewModel;
 import ysf.awd.newapplication_finalproject.R;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -20,6 +21,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText etEmail;
     private EditText etPhone;
     private EditText etPassword;
+    private Button btnRegister;
+    private UserViewModel userViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,8 @@ public class RegisterActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPhone = findViewById(R.id.etPhone);
         etPassword = findViewById(R.id.etPassword);
+        btnRegister = findViewById(R.id.btnRegister);
+
         Button btnRegister = findViewById(R.id.btnRegister);
 
         btnRegister.setOnClickListener(v -> saveUser());

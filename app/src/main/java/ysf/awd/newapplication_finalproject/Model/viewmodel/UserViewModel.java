@@ -38,6 +38,7 @@ public class UserViewModel {
 
     /**
      * هل المستعمل موجود حسب الايميل وكلمة السر
+     *
      * @param myEmail
      * @param myPassw
      * @return تعيد المستعمل حسب الايميل وكلمة المرور
@@ -95,5 +96,19 @@ public class UserViewModel {
     public void update(MyUser users){
         repository.update(users);
     }
+    ///......
+    /**
+     * التحقق من بيانات تسجيل الدخول (تسجيل الدخول / Sign In).
+     *
+     * @param email    البريد الإلكتروني للمستخدم.
+     * @param password كلمة المرور.
+     * @return كائن {@link MyUser} المطابق للبيانات، أو null في حال خطأ البريد أو كلمة المرور.
+     */
+    public MyUser login(String email, String password) {
+        return repository.login(email, password);
+    }
+
+
+
 
 }
