@@ -2,10 +2,13 @@ package ysf.awd.newapplication_finalproject.Model.ViewPkg;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -48,13 +51,40 @@ public class MainActivity extends AppCompatActivity {
         btnRegisterScreen = findViewById(R.id.btnRegisterScreen);
 
     }
-        public void onClick(View view) {
-            Intent i = new Intent(MainActivity.this, AddTaskActivity.class);
-            startActivity(i);
-        }
-        public void onClickR(View view) {
-            Intent i = new Intent(MainActivity.this, RegisterActivity.class);
-            startActivity(i);
-        }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_history) {
+            Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_signout) {
+            Intent intent = new Intent(MainActivity.this, SignOutActivity.class);
+            startActivity(intent);
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View view) {
+        Intent i = new Intent(MainActivity.this, AddTaskActivity.class);
+        startActivity(i);
+    }
+
+    public void onClickR(View view) {
+        Intent i = new Intent(MainActivity.this, RegisterActivity.class);
+        startActivity(i);
+    }
+}

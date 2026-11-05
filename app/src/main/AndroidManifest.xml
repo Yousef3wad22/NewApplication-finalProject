@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewApplicationfinalProject">
         <activity
-            android:name=".Model.ViewPkg.MainActivity"
+            android:name=".Model.ViewPkg.SplashActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Model.ViewPkg.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Model.ViewPkg.AddTaskActivity"
             android:exported="false"
@@ -32,6 +36,18 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Model.ViewPkg.signIn"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Model.ViewPkg.SettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Model.ViewPkg.HistoryActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Model.ViewPkg.SignOutActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NewApplication-finalProject</string>
+    <string name="app_name">Neighborhood Micro-Sharing</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -13,6 +13,7 @@
     <string name="password">Password</string>
     <string name="register">Register</string>
     <string name="sign_in">Sign In</string>
+    <string name="history">History</string>
     <string name="dont_have_account">Don\'t have an account? Register</string>
 
     <string name="lorem_ipsum">
