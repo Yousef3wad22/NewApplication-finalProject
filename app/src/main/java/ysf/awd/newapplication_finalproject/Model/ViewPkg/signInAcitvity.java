@@ -17,7 +17,7 @@ import ysf.awd.newapplication_finalproject.Model.Model.MyUserTable.MyUser;
 import ysf.awd.newapplication_finalproject.Model.viewmodel.UserViewModel;
 import ysf.awd.newapplication_finalproject.R;
 
-public class signIn extends AppCompatActivity {
+public class signInAcitvity extends AppCompatActivity {
     private TextView signText;
     private EditText editUserName;
     private EditText editPassword;
@@ -45,7 +45,7 @@ public class signIn extends AppCompatActivity {
         button2.setOnClickListener(v -> signInUser());
 
         btnGoToRegister.setOnClickListener(v -> {
-            Intent intent = new Intent(signIn.this, RegisterActivity.class);
+            Intent intent = new Intent(signInAcitvity.this, RegisterActivity.class);
             startActivity(intent);
         });
 
@@ -68,7 +68,7 @@ public class signIn extends AppCompatActivity {
         MyUser user = userViewModel.login(email, password);
         if (user != null) {
             Toast.makeText(this, "Welcome, " + user.getFullName(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(signIn.this, MainActivity.class);
+            Intent intent = new Intent(signInAcitvity.this, MainActivity.class);
             startActivity(intent);
             finish();
         } else {

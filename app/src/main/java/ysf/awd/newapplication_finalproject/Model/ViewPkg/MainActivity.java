@@ -25,6 +25,7 @@ import ysf.awd.newapplication_finalproject.R;
 public class MainActivity extends AppCompatActivity {
     private Button btnAddTaskScreen;
     private Button btnRegisterScreen;
+    private Button btnSignInScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         });
         btnAddTaskScreen = findViewById(R.id.btnAddTaskScreen);
         btnRegisterScreen = findViewById(R.id.btnRegisterScreen);
+        btnSignInScreen = findViewById(R.id.btnSignInScreen);
 
     }
 
@@ -90,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, RegisterActivity.class);
         startActivity(i);
     }
+    public void onClickS(View v) {
+        Intent i = new Intent(MainActivity.this, signInAcitvity.class);
+        startActivity(i);
+    }
     /**
      * بناء ديالوج
      */
@@ -99,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Log out");//تحديد العنوان
         builder.setMessage("Are you sure?");//تحدي فحوى شباك الحوار
+
 
         //النص على الزر ومعالج الحدث
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -118,8 +125,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Signing out", Toast.LENGTH_SHORT).show();
             }
         });
-
         AlertDialog dialog = builder.create();//بناء شباك الحوار -ديالوغ
         dialog.show();//عرض الشباك
+
+
     }
 }

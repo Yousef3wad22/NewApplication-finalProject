@@ -31,4 +31,15 @@
         android:text="Regiter User"
         android:textSize="16sp" />
 
+    <Button
+        android:id="@+id/btnSignInScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:insetBottom="15dp"
+        android:onClick="onClickS"
+        android:text="Sign In"
+        android:textSize="16sp" />
+
 </LinearLayout>

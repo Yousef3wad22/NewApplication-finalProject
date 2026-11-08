@@ -25,7 +25,7 @@ public class SignOutActivity extends AppCompatActivity {
             return insets;
         });
 
-        Intent intent = new Intent(SignOutActivity.this, signIn.class);
+        Intent intent = new Intent(SignOutActivity.this, signInAcitvity.class);
         startActivity(intent);
         finish();
     }
