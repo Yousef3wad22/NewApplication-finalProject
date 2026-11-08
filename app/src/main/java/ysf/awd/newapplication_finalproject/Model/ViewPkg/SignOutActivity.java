@@ -1,8 +1,8 @@
 package ysf.awd.newapplication_finalproject.Model.ViewPkg;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -29,4 +29,5 @@ public class SignOutActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }
