@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btnRegisterScreen = findViewById(R.id.btnRegisterScreen);
         btnSignInScreen = findViewById(R.id.btnSignInScreen);
 
+
     }
 
     @Override
@@ -92,10 +93,12 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, RegisterActivity.class);
         startActivity(i);
     }
-    public void onClickS(View v) {
+
+    public void onClickS(View view) {
         Intent i = new Intent(MainActivity.this, signInAcitvity.class);
         startActivity(i);
     }
+
     /**
      * بناء ديالوج
      */

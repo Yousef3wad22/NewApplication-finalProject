@@ -30,8 +30,8 @@ public class signInAcitvity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        setContentView(R.layout.activity_sign_in);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.signIn), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -71,6 +71,7 @@ public class signInAcitvity extends AppCompatActivity {
             Intent intent = new Intent(signInAcitvity.this, MainActivity.class);
             startActivity(intent);
             finish();
+
         } else {
             Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
         }
