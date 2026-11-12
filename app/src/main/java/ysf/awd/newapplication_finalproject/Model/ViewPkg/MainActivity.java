@@ -17,6 +17,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import ysf.awd.newapplication_finalproject.Model.AppDataBase;
 import ysf.awd.newapplication_finalproject.Model.Model.MySubjectTable.MySubject;
 import ysf.awd.newapplication_finalproject.Model.Model.MySubjectTable.MySubjectQuery;
@@ -45,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         subjectQuery.insert(s1);
         subjectQuery.insert(s2);
         setContentView(R.layout.activity_main);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        // عرض الصفحة الرئيسية كصفحة افتراضية عند بدء التطبيق لأول مرة
+        if (savedInstanceState == null) {
+            replaceFragment(new HomeFragment());
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -55,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         btnRegisterScreen = findViewById(R.id.btnRegisterScreen);
         btnSignInScreen = findViewById(R.id.btnSignInScreen);
 
+
+    }
+
+    private void replaceFragment(HomeFragment homeFragment) {
 
     }
 
@@ -76,9 +87,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.action_signout) {
-            Intent intent = new Intent(MainActivity.this, SignOutActivity.class);
-            startActivity(intent);
-            finish();
+            showYesNoDialog();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -129,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         AlertDialog dialog = builder.create();//بناء شباك الحوار -ديالوغ
-        dialog.show();//عرض الشباك
+        dialog.show();//عرض الشباكfg
 
 
     }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/splash_logo"
+        android:iconTint="#FFFFFF"
+        android:title="home"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/nav_dashboard"
+        android:title="dashboard" />
+    <item
+        android:id="@+id/nav_settings"
+        android:title="sittings" />
+</menu>

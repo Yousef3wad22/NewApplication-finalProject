@@ -2,6 +2,8 @@ package ysf.awd.newapplication_finalproject.Model.ViewPkg;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -37,6 +39,7 @@ public class signInAcitvity extends AppCompatActivity {
             return insets;
         });
 
+
         signText = findViewById(R.id.signText);
         editUserName = findViewById(R.id.editUserName);
         editPassword = findViewById(R.id.editPassword);
@@ -46,6 +49,10 @@ public class signInAcitvity extends AppCompatActivity {
 
         btnGoToRegister.setOnClickListener(v -> {
             Intent intent = new Intent(signInAcitvity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+        button2.setOnClickListener(v -> {
+            Intent intent = new Intent(signInAcitvity.this, MainActivity.class);
             startActivity(intent);
         });
 
@@ -64,6 +71,11 @@ public class signInAcitvity extends AppCompatActivity {
             editPassword.requestFocus();
             return;
         }
+        if (!isValidEmail(email)){
+            editUserName.setError("Email is valid");
+            editUserName.requestFocus();
+            return;
+        }
 
         MyUser user = userViewModel.login(email, password);
         if (user != null) {
@@ -75,6 +87,13 @@ public class signInAcitvity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
         }
-    }
 
+    }
+public static boolean isValidEmail(String email){
+        if (TextUtils.isEmpty(email)){
+            return false;
+        }
+        return Patterns.EMAIL_ADDRESS.matcher(email.trim()).matches();
+
+}
 }
