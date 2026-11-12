@@ -2,6 +2,8 @@ package ysf.awd.newapplication_finalproject.Model.ViewPkg;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +28,14 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btnRegister;
 
     private UserViewModel userViewModel;
+
+    public static boolean isValidEmail(String email){
+        if (TextUtils.isEmpty(email)){
+            return false;
+        }
+        return Patterns.EMAIL_ADDRESS.matcher(email.trim()).matches();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
+
 //نشئ كائناً جديداً من فئة MyUser وتُدخل فيه البيانات التي قرأتها من الشاشة:
         MyUser myUser = new MyUser();
         myUser.setFullName(fullName);
@@ -80,6 +91,8 @@ public class RegisterActivity extends AppCompatActivity {
         //تظهر رسالة للمستعمل تؤكد نجاح عملية التسجيل، ثم تُغلق شاشة التسجيل وتعود للشاشة السابقة عبر الدالة finish():
         Toast.makeText(this, "User registered successfully", Toast.LENGTH_SHORT).show();
         finish();
+
     }
 
-}
+
+    }
