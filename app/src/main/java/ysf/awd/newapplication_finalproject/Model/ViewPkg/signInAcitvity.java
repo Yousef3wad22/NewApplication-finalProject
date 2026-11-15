@@ -71,7 +71,7 @@ public class signInAcitvity extends AppCompatActivity {
             editPassword.requestFocus();
             return;
         }
-        if (!isValidEmail(email)){
+        if (!isValidEmail(email,password)){
             editUserName.setError("Email is valid");
             editUserName.requestFocus();
             return;
@@ -89,11 +89,36 @@ public class signInAcitvity extends AppCompatActivity {
         }
 
     }
-public static boolean isValidEmail(String email){
-        if (TextUtils.isEmpty(email)){
-            return false;
-        }
-        return Patterns.EMAIL_ADDRESS.matcher(email.trim()).matches();
+    // أضف هذه الدالة داخل فئة signIn
+    public boolean isValidEmail(String email, String password) {
+        boolean isValid = true;
 
-}
+        // فحص البريد الإلكتروني
+        if (TextUtils.isEmpty(email)) {
+            editUserName.setError("الرجاء إدخال البريد الإلكتروني");
+            editUserName.requestFocus();
+            isValid = false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editUserName.setError("صيغة البريد الإلكتروني غير صحيحة");
+            editUserName.requestFocus();
+            isValid = false;
+        } else {
+            editUserName.setError(null);
+        }
+
+        // فحص كلمة المرور
+        if (TextUtils.isEmpty(password)) {
+            editPassword.setError("الرجاء إدخال كلمة المرور");
+            editPassword.requestFocus();
+            isValid = false;
+        } else if (password.length() < 6) {
+            editPassword.setError("كلمة المرور يجب أن تتكون من 6 خانات على الأقل");
+            editPassword.requestFocus();
+            isValid = false;
+        } else {
+            editPassword.setError(null);
+        }
+
+        return isValid;
+    }
 }
