@@ -51,46 +51,12 @@ public class signInAcitvity extends AppCompatActivity {
             Intent intent = new Intent(signInAcitvity.this, RegisterActivity.class);
             startActivity(intent);
         });
-        button2.setOnClickListener(v -> {
-            Intent intent = new Intent(signInAcitvity.this, MainActivity.class);
-            startActivity(intent);
-        });
+
 
     }
-    public void signInUser() {
+    public boolean signInUser() {
         String email = editUserName.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
-
-        if (email.isEmpty()) {
-            editUserName.setError("Email is required");
-            editUserName.requestFocus();
-            return;
-        }
-        if (password.isEmpty()) {
-            editPassword.setError("Password is required");
-            editPassword.requestFocus();
-            return;
-        }
-        if (!isValidEmail(email,password)){
-            editUserName.setError("Email is valid");
-            editUserName.requestFocus();
-            return;
-        }
-
-        MyUser user = userViewModel.login(email, password);
-        if (user != null) {
-            Toast.makeText(this, "Welcome, " + user.getFullName(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(signInAcitvity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-
-        } else {
-            Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-    // أضف هذه الدالة داخل فئة signIn
-    public boolean isValidEmail(String email, String password) {
         boolean isValid = true;
 
         // فحص البريد الإلكتروني
@@ -119,6 +85,28 @@ public class signInAcitvity extends AppCompatActivity {
             editPassword.setError(null);
         }
 
+        // التنفيذ والانتقال للصفحة الرئيسية (فقط إذا كانت المدخلات سليمة)
+        if (isValid) {
+            // فحص البيانات مع قاعدة البيانات أو ViewModel
+            MyUser user = userViewModel.login(email, password);
+
+            if (user != null) { // تم العثور على المستخدم (بيانات صحيحة)
+                Toast.makeText(this, "Welcome, " + user.getFullName(), Toast.LENGTH_SHORT).show();
+
+                // الانتقال إلى الصفحة الرئيسية
+                button2.setOnClickListener(v -> {
+                    Intent intent = new Intent(signInAcitvity.this, MainActivity.class);
+                    startActivity(intent);
+                });
+
+            } else { // البريد أو كلمة المرور غير صحيحة في قاعدة البيانات
+                Toast.makeText(this, "البريد الإلكتروني أو كلمة المرور غير صحيحة", Toast.LENGTH_SHORT).show();
+            }
+        }
+
         return isValid;
     }
+
+
 }
+
