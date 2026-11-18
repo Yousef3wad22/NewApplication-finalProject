@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
             return true;
-        }else if ((id == R.id.action_signout)) {
+        }
+        else if ((id == R.id.action_signout)) {
             showYesNoDialog();
             return true;
         }
